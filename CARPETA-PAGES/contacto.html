@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CARPETA-CSS/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg mi-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <img width="50" height="35" src="../CARPETA-IMG/logo.png" alt="logo"/>
+                <p class="titulo-principal">BLINKS</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                    <a class="nav-link" href="../CARPETA-PAGES/tienda.html">Blinks Shopp</a>
+                    <a class="nav-link" href="../CARPETA-PAGES/contacto.html">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+
+        <form class="formulario" action="../CARPETA-PAGES/envioF.html" method="post">
+            <H2 class="form__titulo">Formulario de contacto</H2>
+            <!-- DATOS DE LA PERSONA QUE SE CONTACTA -->
+
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribí tu nombre" required>
+
+
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Escribí tu apellido" required>
+
+
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Escribí tu gmail" required>
+
+
+            <div class="form__campo">
+                <label for="suscripcion">
+                    ¿Desea recibir informacion por gmail?
+                </label>
+                <input type="checkbox" name="suscripcion" id="suscripcion">
+            </div>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" required></textarea>
+
+
+            <button class="boton" type="submit">Enviar</button>
+
+        </form>
+
+    </main>
+
+    <br>
+    <footer> 
+        <p>Encontranos en nuestras redes</p>
+        <div class="footer--img">
+            <a href="https://www.instagram.com/" target="_blank" > <img width="35px" src="../CARPETA-IMG/instagram.png" alt="logo instagram"> </a>
+            <a href="https://web.whatsapp.com/" target="_blank" ><img width="35px" src="../CARPETA-IMG/whatsapp.png" alt="logo whatsapp"></a>
+            <a href="https://www.facebook.com/" target="_blank" ><img width="35px" src="../CARPETA-IMG/facebook.png" alt="logo facebook"></a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

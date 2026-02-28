@@ -1,0 +1,413 @@
+
+/*RESET DE CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*mobile first*/
+html{
+    font-size: 0.9rem;
+}
+html, body{
+    height: 100%;
+}
+/* fondos de bloques*/
+body{
+    background:#f4e4c1;
+    font-family:Arial, Helvetica, sans-serif ; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+header{
+    background:#7a4b2b;
+    display: flex;
+    flex-wrap: wrap; /*para cuando no alcance el espacio*/
+    width: 100%;
+    text-align: center;
+    position: static;
+
+}
+/*ESTILOS PARA ELEMENTOS DE BOOTSTRAP*/
+.mi-nav{
+    background-color:#7a4b2b; 
+
+}
+.titulo-principal{
+    font-size:2rem;
+}
+p{
+    margin-bottom: 0;
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    
+}
+.nav-link, .navbar-brand{
+    color:#f4e4c1;
+}
+.navbar-toggler {
+    border-color: #c8a27c; 
+
+}
+.navbar-collapse{
+    padding: 15px;
+}
+
+
+/*FIN ESTILSO BOOTSTRAP*/
+
+nav{
+    background-color:  #7a4b2b;
+    width: 100%;
+    padding: 0.8rem;
+    position: sticky; /*fija el menu*/
+    top: 0;
+    z-index: 10;
+
+}
+
+nav ul{
+    
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #f4e4c1;
+}
+/*PSEUDOCLASES*/
+    /*BOTONES*/
+.boton{
+    background-color:#7a4b2b;
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 2px solid #422918;
+    padding: 0.2rem 1rem;
+    border-radius:6px;
+}
+.boton:hover{
+    background-color: #a06c4a;
+}
+
+.boton:active{
+    background-color: #422918;
+    transform: scale(0.95); /* efecto de presión */
+}
+
+footer{
+    background:#7a4b2b;
+    text-align: center;
+    color: #f4e4c1;
+    padding: 0.8rem;
+
+}
+footer a{
+    text-decoration: none;
+    color: #f4e4c1;
+    padding: 0.5rem;
+
+    
+}
+
+
+
+/*Clases*/
+
+.parrafos{
+    font-style: italic; /* parrafos en cursiva*/
+}
+
+.conocer{
+    font-style: normal;
+} 
+
+.titulo-paginas{
+
+    text-transform: uppercase;
+    margin:1.5rem ;
+    margin-bottom: 0;
+
+}
+
+.menu__titulo{
+    text-decoration: none;
+    color: #7a4b2b;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.footer--img{
+    margin-top: 0.5rem;
+}
+.footer--img img{
+    width:2rem;
+    flex: 1;
+
+}
+/*display flex*/
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 1rem;
+}
+
+.nuestro-cafe{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+
+}
+.nuestro-cafe__texto{
+    display: flex;
+    flex-direction: column;
+    width: 100%;;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+.nuestro-cafe__imagenes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+
+
+
+/*PAGINA SHOP*/
+.articulos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+}
+/*
+.articulos__producto{
+    text-align: center;
+    padding: 1.2rem;
+}
+.articulos__producto img{
+    width: 55%;
+    height: auto;
+    margin: auto;
+
+    
+}
+.articulos__producto h3 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.articulos__producto p {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+*/
+/*Bootstrap*/
+.card-body{
+    background-color:#f0c9a2e1;
+}
+
+/*PAGINA SOBRE NOSOTROS*/
+.cont-about{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 1rem;
+
+}
+.about-img{
+    text-align: center;
+}
+
+.cont-about img{
+    width: 100%;
+}
+
+
+/*TABLET 768*/
+@media (min-width: 768px) {
+    html{
+        font-size: 18px ;
+    }
+    header{
+        justify-content: center;
+    }
+    /*INDEX*/
+    /*ESTILOS PARA BOOTSTRAP*/
+    /*Achicar Carrousel*/
+    #carouselExampleCaptions, .carrousel-iner{
+        width: 50%;
+
+    }
+
+    #carouselExampleCaptions img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    
+
+
+
+    /*PAGINA SHOP*/
+    .articulos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+
+    }
+    .articulos__producto img{
+        width: 40%;
+    }
+
+
+    /*PAGINA SOBRE NOSOTROS*/
+    .cont-about{
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about__img{
+        flex: 1;
+    }
+
+    .about__text{
+        flex: 1;
+        width: 100%;
+        padding-left: 2rem;
+    }
+
+    .cont-about img{
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+/*TABLET 768*/
+@media (min-width: 1024px) {
+
+    /*INDEX*/
+    .nuestro-cafe{
+        flex-wrap: nowrap;
+    }
+    .nuestro-cafe__texto{
+        width: 50%;
+    }
+    .nuestro-cafe__texto--centrado{
+        padding:5rem 4rem;
+        
+    }
+    .parrafos{
+        margin: 1rem 0;
+    }
+
+    #carouselExampleCaptions{
+        display: flex;
+        align-items: center;
+    }
+
+    #carouselExampleCaptions, .carrousel-iner{
+        width: 30%;
+
+    }
+
+
+    /*PAGINA SOBRE NOSOTROS*/
+    .about__img{
+        display: flex;
+        justify-content: center;
+    }
+    .about__text{
+        padding-right: 2rem;
+    }
+
+    /*TIENDA*/
+        .articulos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+
+    }
+}
+
+
+/*PAGINA FORMULARIO*/
+.formulario {
+    width: 70%;
+    height: 70vh;
+    margin:auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #e6d6b8;
+    border-radius: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+.form__titulo{
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+input, textarea{
+    padding: 0.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+    border-color: #7a4b2b;
+    box-shadow: 0 0 0 1px rgba(117, 53, 23, 0.493);
+}
+
+input:focus-visible, textarea:focus-visible{
+    background-color: #bd8763b4;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #7a4b2b;
+    cursor: pointer;
+}
+
+input, textarea {
+    font-family: 'Arial', sans-serif;
+    font-size: 0.8rem;
+}
+
