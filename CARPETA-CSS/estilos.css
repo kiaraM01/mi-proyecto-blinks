@@ -1,12 +1,9 @@
-
 /*RESET DE CSS */
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 /*mobile first*/
 html{
@@ -18,7 +15,7 @@ html, body{
 /* fondos de bloques*/
 body{
     background:#f4e4c1;
-    font-family:Arial, Helvetica, sans-serif ; 
+    font-family: "Montserrat", sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,45 +23,6 @@ body{
 main{
     flex: 1;
 }
-header{
-    background:#7a4b2b;
-    display: flex;
-    flex-wrap: wrap; /*para cuando no alcance el espacio*/
-    width: 100%;
-    text-align: center;
-    position: static;
-
-}
-/*ESTILOS PARA ELEMENTOS DE BOOTSTRAP*/
-.mi-nav{
-    background-color:#7a4b2b; 
-
-}
-.titulo-principal{
-    font-size:2rem;
-}
-p{
-    margin-bottom: 0;
-}
-.navbar-brand{
-    display: flex;
-    align-items: center;
-    
-}
-.nav-link, .navbar-brand{
-    color:#f4e4c1;
-}
-.navbar-toggler {
-    border-color: #c8a27c; 
-
-}
-.navbar-collapse{
-    padding: 15px;
-}
-
-
-/*FIN ESTILSO BOOTSTRAP*/
-
 nav{
     background-color:  #7a4b2b;
     width: 100%;
@@ -72,11 +30,8 @@ nav{
     position: sticky; /*fija el menu*/
     top: 0;
     z-index: 10;
-
 }
-
 nav ul{
-    
     display: flex;
     justify-content: center;
     list-style: none;
@@ -86,8 +41,51 @@ nav ul li a{
     text-decoration: none;
     color: #f4e4c1;
 }
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+footer{
+    background:#7a4b2b;
+    text-align: center;
+    color: #f4e4c1;
+    padding: 0.8rem;
+}
+footer a{
+    padding: 0.5rem;
+}
+
+/*ESTILOS PARA ELEMENTOS DE BOOTSTRAP*/
+/*INDEX-NAV*/
+.mi-nav{
+    background-color:#7a4b2b; 
+
+}
+.titulo-principal{
+    font-size:2rem;
+    margin-bottom: 0; /*por bootstrap, las etiquetas p, tiene margin-bootom y se lo saco para que me quede alineado el titulo de la pagina en nav*/
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+.nav-link, .navbar-brand{
+    color:#f4e4c1;
+}
+.navbar-toggler {
+    border-color: #c8a27c; 
+}
+.navbar-collapse{
+    padding: 15px;
+}
+/*PAGINA SHOP*/
+.card-body{
+    background-color:#f0c9a2e1;
+}
+/*FIN ESTILSO BOOTSTRAP*/
+
 /*PSEUDOCLASES*/
-    /*BOTONES*/
+/*BOTONES*/
 .boton{
     background-color:#7a4b2b;
     display: inline-block;
@@ -96,51 +94,30 @@ nav ul li a{
     border: 2px solid #422918;
     padding: 0.2rem 1rem;
     border-radius:6px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 .boton:hover{
     background-color: #a06c4a;
 }
-
 .boton:active{
     background-color: #422918;
     transform: scale(0.95); /* efecto de presión */
 }
-
-footer{
-    background:#7a4b2b;
-    text-align: center;
-    color: #f4e4c1;
-    padding: 0.8rem;
-
-}
-footer a{
-    text-decoration: none;
-    color: #f4e4c1;
-    padding: 0.5rem;
-
-    
-}
-
-
+/*FIN PSEUDOCLASES*/
 
 /*Clases*/
-
 .parrafos{
     font-style: italic; /* parrafos en cursiva*/
 }
-
 .conocer{
     font-style: normal;
 } 
-
 .titulo-paginas{
-
     text-transform: uppercase;
-    margin:1.5rem ;
-    margin-bottom: 0;
+    margin:1rem ;
 
 }
-
 .menu__titulo{
     text-decoration: none;
     color: #7a4b2b;
@@ -153,25 +130,16 @@ footer a{
 .footer--img img{
     width:2rem;
     flex: 1;
-
 }
+
 /*display flex*/
-
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding-bottom: 1rem;
-}
-
+/*INDEX*/
 .nuestro-cafe{
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
     padding: 2rem;
-
 }
 .nuestro-cafe__texto{
     display: flex;
@@ -180,14 +148,12 @@ footer a{
     gap: 1rem;
     align-items: flex-start;
 }
-
 .nuestro-cafe__imagenes{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
 }
-
 .experiencia{
     display: flex;
     flex-direction: column;
@@ -196,98 +162,104 @@ footer a{
     align-items: flex-start;
 }
 
-
-
-
 /*PAGINA SHOP*/
 .articulos{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
     gap: 1rem;
+    margin-bottom: 1rem
 
 }
-/*
-.articulos__producto{
-    text-align: center;
-    padding: 1.2rem;
-}
-.articulos__producto img{
-    width: 55%;
+/*PAGINA CARTA*/
+.reparacion{
+    width: 100%;
     height: auto;
-    margin: auto;
-
-    
 }
-.articulos__producto h3 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-}
-
-.articulos__producto p {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
-*/
-/*Bootstrap*/
-.card-body{
-    background-color:#f0c9a2e1;
-}
-
 /*PAGINA SOBRE NOSOTROS*/
 .cont-about{
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 0 2rem 1rem ;
     gap: 1rem;
-
 }
 .about-img{
     text-align: center;
 }
-
 .cont-about img{
     width: 100%;
 }
 
+/*PAGINA FORMULARIO*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70vh;
+    margin:auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #e6d6b8;
+    border-radius: 10px;
+    gap: 0.5rem;
+}
+.form__titulo{
+    text-align: center;
+    text-transform: uppercase;
+}
 
+input, textarea{
+    padding: 0.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-radius: 6px;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-color: #7a4b2b;
+    box-shadow: 0 0 0 1px rgba(117, 53, 23, 0.493);
+}
+input:focus-visible, textarea:focus-visible{
+    background-color: #bd8763b4;
+}
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #7a4b2b;
+    cursor: pointer;
+}
+input, textarea {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}
+/* //// */
+/*MEDIAQUERYS*/
 /*TABLET 768*/
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     html{
         font-size: 18px ;
-    }
-    header{
-        justify-content: center;
     }
     /*INDEX*/
     /*ESTILOS PARA BOOTSTRAP*/
     /*Achicar Carrousel*/
-    #carouselExampleCaptions, .carrousel-iner{
+    #carouselExampleCaptions{
         width: 50%;
-
     }
-
     #carouselExampleCaptions img {
         height: 100%;
         width: 100%;
         object-fit: cover;
     }
-    
-    
-
-
-
     /*PAGINA SHOP*/
     .articulos{
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 1rem;
-
     }
     .articulos__producto img{
         width: 40%;
     }
-
 
     /*PAGINA SOBRE NOSOTROS*/
     .cont-about{
@@ -310,10 +282,21 @@ footer a{
         width: 100%;
         max-width: 450px;
     }
+    /*PAGINA CARTA*/
+    .contenedor-carta{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .reparacion{
+        width: 100%;
+        height: auto;
+    }
 }
 
-/*TABLET 768*/
-@media (min-width: 1024px) {
+
+/*DESKTOP 1025*/
+@media (min-width: 1025px) {
 
     /*INDEX*/
     .nuestro-cafe{
@@ -333,10 +316,11 @@ footer a{
     #carouselExampleCaptions{
         display: flex;
         align-items: center;
-    }
-
-    #carouselExampleCaptions, .carrousel-iner{
         width: 30%;
+    }
+    /*PAGINA CARTA*/
+    .contenedor-carta{
+        grid-template-columns: repeat(4, 1fr);
 
     }
 
@@ -349,7 +333,6 @@ footer a{
     .about__text{
         padding-right: 2rem;
     }
-
     /*TIENDA*/
         .articulos{
         display: grid;
@@ -358,56 +341,3 @@ footer a{
 
     }
 }
-
-
-/*PAGINA FORMULARIO*/
-.formulario {
-    width: 70%;
-    height: 70vh;
-    margin:auto;
-    margin-top: 2rem;
-    padding: 1rem;
-    background: #e6d6b8;
-    border-radius: 10px;
-    
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    
-}
-.form__titulo{
-    text-align: center;
-    text-transform: uppercase;
-
-}
-
-input, textarea{
-    padding: 0.5rem;
-    border-width: 2px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204);
-    border-radius: 6px;
-}
-
-input:focus, textarea:focus{
-    outline: none;
-    border-color: #7a4b2b;
-    box-shadow: 0 0 0 1px rgba(117, 53, 23, 0.493);
-}
-
-input:focus-visible, textarea:focus-visible{
-    background-color: #bd8763b4;
-}
-
-input[type="checkbox"] {
-    width: 1rem;
-    height: 1rem;
-    accent-color: #7a4b2b;
-    cursor: pointer;
-}
-
-input, textarea {
-    font-family: 'Arial', sans-serif;
-    font-size: 0.8rem;
-}
-
