@@ -1,0 +1,37 @@
+/*MEDIAQUERYS*/
+
+/*DESKTOP 1025*/
+@media (min-width: 1024px) {
+
+    html {
+    font-size: 1.2rem;
+    }
+
+    /*INDEX*/
+
+    .parrafos{
+        margin: 1rem 0;
+    }
+
+    #carouselExampleCaptions{
+        display: flex;
+        align-items: center;
+
+    }
+    /*PAGINA CARTA*/
+    .contenedor-carta{
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+    /*PAGINA SOBRE NOSOTROS*/
+    .cont-about-card1, .cont-about-card2{
+        margin: 0 10rem;
+    }
+    /*TIENDA*/
+        .articulos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 1rem;
+
+    }
+}

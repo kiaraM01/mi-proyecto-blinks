@@ -1,0 +1,192 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixin" as *;
+
+
+
+
+
+body{
+    background:$color-bg;
+    font-family: "Montserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    flex: 1;
+}
+h2{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+footer{
+    background:$color-nav-footer;
+    text-align: center;
+    color: $color-bg;
+    padding: 0.8rem;
+    a{
+        padding: 0.5rem;
+        text-decoration: none;
+    }
+}
+
+
+/*ESTILOS PARA ELEMENTOS DE BOOTSTRAP*/
+/*INDEX-NAV*/
+.mi-nav{
+    background-color:$color-nav-footer; 
+
+}
+.titulo-principal{
+    font-size:2rem;
+    margin-bottom: 0; /*por bootstrap, las etiquetas p, tiene margin-bootom y se lo saco para que me quede alineado el titulo de la pagina en nav*/
+}
+.navbar-brand{
+    display: flex;
+    align-items: center;
+}
+.nav-link, .navbar-brand{
+    color:$color-bg;
+}
+.navbar-toggler {
+    border-color:$color-bg; 
+}
+.navbar-collapse{
+    padding: 15px;
+}
+/*PAGINA SHOP*/
+.card-body{
+    background-color:$color-bg;
+}
+/*FIN ESTILSO BOOTSTRAP*/
+
+
+/*PSEUDOCLASES o ANIMACIONES*/
+/*BOTONES*/
+.boton{
+    background-color:#7a4b2b;
+    display: inline-block;
+    text-decoration: none;
+    color: whitesmoke;
+    border: 2px solid #422918;
+    padding: 0.2rem 1rem;
+    border-radius:6px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+.boton:hover{
+    background-color: #a06c4a;
+}
+.boton:active{
+    background-color: #422918;
+    transform: scale(0.95); /* efecto de presión */
+}
+
+
+/*FIN PSEUDOCLASES*/
+
+/*Clases*/
+.parrafos{
+    font-style: italic; /* parrafos en cursiva*/
+}
+.titulo-paginas{
+    text-transform: uppercase;
+    margin:1rem ;
+
+}
+.footer--img{
+    margin-top: 0.5rem;
+    img{
+        width:2rem;
+        flex: 1;
+    }
+}
+
+
+/*display flex*/
+/*INDEX*/
+
+.nuestro-cafe{
+    @include contenedor(wrap,row,center,stretch,none,none ,1rem , none);
+}
+.nuestro-cafe__texto{
+    @include contenedor(nowrap,column ,none ,flex-start ,100% ,none ,1rem ,2rem );
+}
+.experiencia{
+    @include contenedor(nowrap,column ,none ,flex-start ,none ,none ,1rem ,2rem );
+}
+
+/*PAGINA SHOP*/
+.articulos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem
+
+}
+/*PAGINA CARTA*/
+.reparacion{
+    width: 100%;
+    height: auto;
+}
+
+
+/*$flexWrap,$flexDirection,$justifyContent,$alingItems,$wd,$hg,$gap,$padd*/
+/*PAGINA SOBRE NOSOTROS*/
+.cont-about{
+    @include contenedor(wrap,none,none,none ,none ,none ,1rem , 0 2rem 1rem );
+    img{
+        width: 100%;
+    }
+    .about__text{
+        margin-top: 1rem;
+    }
+}
+
+
+/*PAGINA FORMULARIO*/
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70vh;
+    margin:auto;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #e6d6b8;
+    border-radius: 10px;
+    gap: 0.5rem;
+}
+.form__titulo{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+input, textarea{
+    padding: 0.5rem;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(204, 204, 204);
+    border-radius: 6px;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-color: #7a4b2b;
+    box-shadow: 0 0 0 1px rgba(117, 53, 23, 0.493);
+}
+input:focus-visible, textarea:focus-visible{
+    background-color: #bd8763b4;
+}
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    accent-color: #7a4b2b;
+    cursor: pointer;
+}
+input, textarea {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}

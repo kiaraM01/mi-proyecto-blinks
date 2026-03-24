@@ -1,0 +1,15 @@
+
+
+
+@mixin contenedor($flexWrap,$flexDirection,$justifyContent,$alingItems,$wd,$hg,$gap,$padd){
+    display: flex;
+    flex-wrap: $flexWrap;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alingItems;
+
+    width: $wd;
+    height: $hg;
+    gap: $gap;
+    padding: $padd;
+}

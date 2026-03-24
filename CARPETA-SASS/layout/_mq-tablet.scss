@@ -1,0 +1,49 @@
+/*MEDIAQUERYS*/
+/*TABLET 768*/
+@media (min-width: 768px) {
+    /*INDEX*/
+    /*ESTILOS PARA BOOTSTRAP*/
+    #carouselExampleCaptions{
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    /*PAGINA SHOP*/
+    .articulos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+    }
+    .articulos__producto img{
+        width: 40%;
+    }
+    /*PAGINA SOBRE NOSOTROS*/
+
+    .cont-about-card1, .cont-about-card2{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .about__img{
+        width: 40%;
+    }
+    .about__text{
+        flex: 1;
+        width: 100%;
+
+    }
+
+    /*PAGINA CARTA*/
+    .contenedor-carta{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .reparacion{
+        width: 100%;
+        height: auto;
+    }
+}
